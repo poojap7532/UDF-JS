@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 5</title>
+</head>
+
+<body>
+    <!-- 5.Write a JavaScript program to input angles of a triangle and check whether triangle is valid or not- -->
+    <!-- (using simple function) -->
+
+   <script>
+ 
+    function triangle(angle1, angle2, angle3) {
+        // Check if the sum of angles is 180 degrees
+        if (angle1 + angle2 + angle3 === 180) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    // Taking input from the user
+    let angle1 = parseFloat(prompt("Enter the first angle:"));
+    let angle2 = parseFloat(prompt("Enter the second angle:"));
+    let angle3 = parseFloat(prompt("Enter the third angle:"));
+    
+    // Checking if the triangle is valid
+    if (triangle(angle1, angle2, angle3)) {
+        console.log("The angles form a valid triangle.");
+    } else {
+        console.log("The angles do not form a valid triangle.");
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 4</title>
+</head>
+
+<body>
+    <!-- 4. Write a JavaScript program to find which number is greter in 4 numbers using ledder if else. -->
+    <!-- (using no return with parameter function) -->
+
+    <input type="text" id="n1"><br><br>
+    <input type="text" id="n2"><br><br>
+    <input type="text" id="n3"><br><br>
+    <input type="text" id="n4"><br><br>
+
+    <input type="submit" onclick="maths()">
+    <h1 id="ans"></h1>
+
+
+    <script>
+        function maths() {
+
+            var n1 = parseInt(document.getElementById('n1').value);
+            var n2 = parseInt(document.getElementById('n2').value);
+            var n3 = parseInt(document.getElementById('n3').value);
+            var n4 = parseInt(document.getElementById('n4').value);
+
+
+            demo(n1, n2, n3, n4);
+        }
+
+        function demo(a, b, c, d) {
+            if (a >= b && a >= c && a >= d) {
+                document.getElementById("ans").innerHTML = "A is greater number";
+            } else if (b >= a && b >= c && b >= d) {
+                document.getElementById("ans").innerHTML = "B is greater number";
+            } else if (c >= a && c >= b && c >= d) {
+                document.getElementById("ans").innerHTML = "C is greater number";
+            } else if (d >= a && d >= b && d >= c) {
+                document.getElementById("ans").innerHTML = "D is greater number";
+            } else {
+                document.getElementById("ans").innerHTML = "No answer found";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
